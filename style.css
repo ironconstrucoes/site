@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+header {
+  background: rgba(18, 18, 18, 0.9); /* Fundo escuro com transparência */
+  backdrop-filter: blur(4px);        /* Efeito de desfoque */
+  padding: 1.2rem 0;
+  border-bottom: 2px solid #27ae60;  /* Linha verde no rodapé */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); /* Sombra bonita */
+}
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #27ae60;
+  text-shadow: 0 0 6px rgba(39, 174, 96, 0.5);
+  display: flex;
+  align-items: center;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.logo {
+  width: 60px;
+  margin-right: 15px;
+  filter: drop-shadow(0 0 6px rgba(39, 174, 96, 0.6));
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #27ae60;
+}
+.hero {
+  background: #222;
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.section {
+  padding: 60px 20px;
+}
+.dark {
+  background-color: #1a1a1a;
+}
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.servicos-lista {
+  list-style: none;
+  padding-left: 0;
+}
+.servicos-lista li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+.galeria {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.galeria img {
+  width: 32%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+}
+.equipe-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foto-equipe {
+  width: 180px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px #25D366;
+  z-index: 999;
+  transition: background 0.3s;
+}
+.whatsapp:hover {
+  background-color: #1ebe5d;
+}.equipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.equipe-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.foto-equipe {
+  width: 280px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}.email-link {
+  color: #27ae60; /* verde premium */
+  text-decoration: none;
+  font-weight: 500;
+}/* === Aumentar SÓ a foto do trabalhador === */
+/* Funciona mesmo se o nome do arquivo tiver caminho/pasta ou maiúsculas */
+#equipe img[src*="trabalhador" i],
+#equipe img[src*="trabalhadores" i] {
+  width: 520px !important;   /* ajuste aqui: 420, 480, 600... */
+  height: auto !important;
+  max-width: none !important;
+  display: block !important;
+  margin-inline: auto;        /* opcional: centraliza */
+  border-radius: 10px;        /* opcional */
+}
+
+/* Se o “card/coluna” estiver limitando a largura, libera o espaço */
+#equipe .membro,
+#equipe .card,
+#equipe [class*="membro" i],
+#equipe [class*="card" i] {
+  max-width: none !important;
+}
+
+/* Caso a seção use grid/flex com colunas estreitas, faz o item do trabalhador ocupar a linha toda (moderno, mas eficaz) */
+#equipe :has(img[src*="trabalhador" i]),
+#equipe :has(img[src*="trabalhadores" i]) {
+  grid-column: 1 / -1 !important;  /* grids */
+  flex-basis: 100% !important;      /* flex */
+}/* === Aumentar SÓ a foto do fundador === */
+#equipe img[src*="fundador" i] {
+  width: 400px !important;   /* ajuste conforme quiser */
+  height: auto !important;
+  max-width: none !important;
+  display: block !important;
+  margin-inline: auto;        /* centraliza */
+  border-radius: 10px;        /* opcional */
+}#equipe img[src*="dono" i] {
+  position: relative;
+  left: -40px;   /* ajuste: -20px, -60px... conforme precisar */
+}/* ====== Correções base (não afetam desktop) ====== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  /* 16:9 */
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.video-wrap iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+
+/* Evita rolagem lateral no mobile */
+html, body { overflow-x: hidden; }
+
+/* Grades genéricas que costumam existir */
+.container, .row, .grid { width: 100%; margin: 0 auto; }
+.grid { display: grid; gap: 24px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* Cartões comuns (serviços, equipe etc.) */
+.card {
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* Imagens da equipe */
+.equipe .card img,
+#equipe .card img,
+.section-equipe .card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Botão flutuante do WhatsApp (ajuste fino no mobile vem abaixo) */
+.whatsapp-float {
+  position: fixed; right: 24px; bottom: 24px;
+  z-index: 9999;
+}
+
+/* ====== Breakpoints ====== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .hero { display: grid; align-items: center; gap: 16px; }
+  .hero img { max-height: 340px; object-fit: cover; width: 100%; }
+  .nav, header nav, .menu { gap: 12px; }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  /* Header / Navegação */
+  header, .topbar { padding: 12px 16px; }
+  header nav, .nav, .menu {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .logo img { max-height: 40px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 12px 0; }
+  .hero h1 { font-size: 26px; line-height: 1.2; margin: 0 0 8px; }
+  .hero p { font-size: 16px; margin: 0 auto; max-width: 28ch; }
+
+  /* Grades viram 1 coluna */
+  .grid-3, .grid-2, .grid { grid-template-columns: 1fr !important; }
+
+  /* Seções comuns */
+  section, .section { padding: 20px 16px; }
+
+  /* Cartões */
+  .card { padding: 14px; }
+
+  /* Equipe: fotos um pouco maiores e com respiro */
+  .equipe .card img,
+  #equipe .card img,
+  .section-equipe .card img {
+    border-radius: 16px;
+  }
+
+  /* Tipografia geral */
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  p, li { font-size: 16px; }
+
+  /* Botões ocupando largura boa no mobile */
+  .btn, button, .button {
+    display: inline-block;
+    padding: 12px 16px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  /* WhatsApp flutuante mais pra dentro e mais alto (evita barra do sistema) */
+  .whatsapp-float { right: 16px; bottom: 80px; }
+
+  /* Tabelas/galerias que estouram a tela */
+  .tabela, .galeria, table {
+    display: block; width: 100%; overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Celular pequeno */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 22px; }
+  .hero p { font-size: 15px; }
+  .logo img { max-height: 36px; }
+  .whatsapp-float { right: 12px; bottom: 72px; }
+}

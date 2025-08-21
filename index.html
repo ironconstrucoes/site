@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRON CONSTRUÇÕES</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><img src="logo.png" alt="Logo Iron Construções" class="logo"> IRON CONSTRUÇÕES</h1>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Transformando projetos em realidade</h2>
+    <p>Especialistas em obras residenciais e industriais</p>
+    <a href="#contato" class="btn">Solicite um orçamento</a>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container reveal">
+      <h2>Quem Somos</h2>
+      <p>Somos a IRON CONSTRUÇÕES, especializados em obras de alto padrão com foco em qualidade, inovação e pontualidade.</p>
+    </div>
+  </section>
+
+  <section id="servicos" class="section dark">
+    <div class="container reveal">
+      <h2>Nossos Serviços</h2>
+      <ul class="servicos-lista">
+        <li>✅ Obras residenciais e industriais</li>
+        <li>✅ Construção de casas, sobrados, prédios e galpões e muito mais</li>
+        <li>✅ Da fundação ao acabamento</li>
+        <li>✅ Reformas e ampliações</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="galeria" class="section">
+    <div class="container reveal">
+      <h2>Galeria de Projetos</h2>
+      <div class="galeria">
+        <img src="img1.jpg" alt="Obra 1" />
+        <img src="img2.jpg" alt="Obra 2" />
+        <img src="img3.jpg" alt="Obra 3" />
+      </div>
+    </div>
+  </section>
+
+<section id="video" class="section">
+  <div class="container reveal">
+    <h2>Assista Nossa Apresentação</h2>
+    <p>Veja como a IRON CONSTRUÇÕES transforma projetos em realidade</p>
+    <div class="video-container">
+      <iframe 
+        width="560" 
+        height="315"
+        src="https://www.youtube.com/embed/tK6YRRh5BPs" 
+        title="Vídeo institucional IRON CONSTRUÇÕES"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <section id="equipe" class="section">
+  <div class="container reveal">
+    <h2>Nosso Time</h2>
+    <div class="equipe-grid">
+      <div class="equipe-box">
+        <img src="dono.jpg" alt="Dono da empresa" class="foto-equipe">
+        <p><strong>Fundador:</strong> Responsável pela IRON CONSTRUÇÕES</p>
+      </div>
+      <div class="equipe-box">
+        <img src="trabalhador.jpg" alt="Equipe da obra" class="foto-equipe">
+        <p><strong>Equipe Técnica:</strong> Profissionais qualificados na linha de frente</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="contato" class="section dark">
+    <div class="container reveal">
+      <h2>Fale Conosco</h2>
+      <p>Entre em contato para orçamentos e parcerias:</p>
+      <p><strong>Email:</strong> <a href="mailto:ironcosta30@gmail.com" class="email-link">ironcosta30@gmail.com</a></p>
+      <p><strong>WhatsApp:</strong> (11) 96254-9918</p>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5511962549918" class="whatsapp" target="_blank" title="Fale conosco no WhatsApp">💬</a>
+
+  <footer>
+    <p>© 2025 IRON CONSTRUÇÕES - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const elements = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

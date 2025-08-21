@@ -226,4 +226,33 @@ footer {
 }#equipe img[src*="dono" i] {
   position: relative;
   left: -40px;   /* ajuste: -20px, -60px... conforme precisar */
+
+}/* Ajustes para celular */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .equipe img {
+    width: 100%;
+    max-width: 300px; /* controla o tamanho da foto */
+    margin-bottom: 15px;
+  }
+
+  .texto {
+    font-size: 16px;
+    line-height: 1.4;
+  }
 }
